@@ -1,0 +1,475 @@
+Practical- 1 – Working and implementation of  infrastructure  as a service.
+Launch EC2 Instance (Windows) - AWS Platform.
+3)	Open EC2    
+4)       here click on ‘Launch Instance’   
+5)	 instance a name  
+6)	 select an Operating System.  
+7)	 ‘create new key pair’ and create a new key pair   
+8)       ‘launch instance’   
+9)	Now go to instance and click on connect  
+10)	Go to RDP client and download the remote desktop file.  
+Click on get password.          
+11)	‘Get windows password’ window will open, now click on browse.     
+12)	Select the key-pair we have created before and click on decrypt password.      
+13)	Password decrypted successfully.        
+14)	Copy that password  
+15)	Open the downloaded instance file and click on connect  
+16)	Paste the password copied here.  
+17)	It will launch the virtual server.  
+18)	Terminate the instance.  
+18) End the lab.  
+-----------------------------------------------------------------------------------------------------------------------          
+Practical-2 – Working and implementation of infrastructure  as a service. Launch EC2 Instance (Linux) - AWS Platform.
+2)	 EC2 services. 
+3)	 ‘Launch Instance’ 
+4)	 name of instance 
+5)	Select Amazon Linux or Ubuntu.
+6)	Create Key pair. 
+7)	 click on ‘Launch Instance’  
+9)	Open PuttyGen software. 
+10)	Load ‘.pem’ file in PuttyGen software.  (Change private files to all files) 
+11)	Click on ‘Save as private key’. 
+12)	Open Putty software. 
+13)	Copy ‘Public IPv4 address’ and paste in puttygen software. 
+14)	Go to ‘SSH->Auth’  
+15)	Browse you created  ‘.pem’ file and click on ‘open’ 
+16)	Enter command ‘ec2-user’ 
+17)	Enter command ‘sudo su’ 
+18)	Enter command ‘yum update -y’ 
+19)	Enter command ‘yum install httpd -y’ 
+20)	Enter Command ‘cd /var/www/html’ 
+21)	Create .html file with some code     
+22)	Enter command ‘service httpd start’ 
+23)	Enter command ‘chkconfig httpd on’ 
+24)	Go to ‘EC2 dashboard -> Network and Security ->  
+          Security Groups’ and find ‘edit inbound rules’ click on it. 
+25)	Click on ‘add rule’ 
+26)	Select type ‘HTTP’ 
+27)	Select source ‘Anywhere IPv4’ 
+28)	Add one more rule with ‘HTTPS’ and source ‘Anywhere IPv4’ and click on ‘save rule’. 
+29)	Rules successfully modified. 
+30)	Copy ‘Public IPv4 address’ 
+31)	Open in browser.  done
+32)	Terminate instances.
+33)	End lab
+------------------------------------------------------------------------------------------------------------------------------- 
+Practical 3 : Working and Implementation of Infrastructure as a service
+Create an EC2 Linux Instance and Install a Apache Web Server and run hello World page. ( Use AWS Platform)
+2.	Click on Modules.
+4.	Click on Services.
+5.	Click on EC2.
+6.Click on Launch Instance.
+7.Give the instance name .
+8.Select AWS Linux Machine
+9. Click on Create New Key pair.    
+10. click on create key pair.
+11.The linux.pem file will be downloaded.
+12.Select checkboxes to allow HTTP traffic.
+13.Click on allow HTTP traffic.
+14.Click on Launch instance.
+15.Wait until instance is launched.
+16. Click on view all instances.
+17.Click on your created instance.
+18.Copy the IP address of the instance.
+19.Open Puttygen Software.     
+20.Click on Load.
+21.Browse for pem file.
+22.Click on save private key.
+23.ppk file will be downloaded. 
+24. Open Putty Software.
+25.Copy IP address of your instance.
+26. Open SSH-> Auth
+27. Browse for ppk file.
+28.Click on Open.
+29.login as ec2-user.
+30. Give the command : sudo su
+31. Give the command one by one.
+      yum update -y  (yum is a package manager)
+      yum install httpd -y
+      cd /var/www/html
+      vi index.html
+32. Inside index.html write the following code :
+33. Give the command one by one.
+      service httpd start
+      chkconfig httpd on
+34. Copy IP address of the created instance and paste it in the browser.
+35. Click instance state.
+32.Click terminate instance.
+33. end lab.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 4– create an S3 bucket,upload a file to S3 bucket, retrieve a file from S3 bucket,delete a file from S3 bucket using AWS.
+2)	Select ‘Services->Storage->S3’ 
+3)	Click on ‘Create bucket’ 
+4)	Give unique name to bucket. 
+5)	‘Enable ACLs option’ and click on create bucket.  
+7)	Now open bucket and click on ‘upload->add files’. 
+8)	Select file from your device. 
+9)	Click on ‘upload’ 
+10)	Allow Public access for bucket. 
+11)	file Uploaded successfully. 
+                 Changing access permissions. 
+12)	Go to bucket->your bucket->edit block  
+                 Public access 
+13)	Uncheck the ‘Block all public access’ option. 
+14)	It will ask you for confirmation.  
+15)	Public access permissions edited successfully. 
+16)	Now go to bucket->your bucket->permissions. 
+17)	Scroll and Go to ‘Access control list’ and click on edit. 
+18)	Check the option ‘Read’ of Everyone. 
+19)	Successfully edited access control list. 
+20)	Go to bucket and click on file we uploaded before. 
+21)	Copy the ‘Object URL’ 
+22)	Open copied URL in new tab.  Deleting bucket and objects. 
+23)	For deleting objects go to objects and select the objects you want to delete and click on ‘Delete’. 
+24)	It will ask your permission for permanently deleting The objects. 
+25)	Successfully deleted objects. 
+26)	For empty bucket, Select the bucket and click on ‘Empty’ 
+27)     Click on ‘Empty’ 
+29)	delete the bucket. 
+30)	end lab. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 5: Practical Implementation of Storage as a Service.
+Hosting a static website in AWS using S3.
+2.	Click on Modules.
+5.	Click on S3.
+6. Click on create bucket, 
+7. Choose ACL enabled on the radio button.
+8. scroll and Uncheck block all public access. 
+9.Click on create bucket.
+10.Create index.html file in notebook.  and write some code.
+11. Click on Add files, select index.html file. 
+12. click on upload.
+13. Click on index.html 
+14. Click on permission and then on edit.
+15. .Mark all read and grant permission to everyone to access the file.
+16. Click on save changes.
+17. Click on the bucket name.
+18.Click on permissions and then on edit.
+19.Click on save changes.
+20. Type ‘confirm’ and click on confirm button.
+21.Click on Index.html
+22. Copy the Object url.
+23.Paste the url in the browser.
+24.To delete the object click on the bucket name and click on delete.
+25. delete the index.html 
+26. delete the bucket 
+27. End Lab.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 6: Working and Implementation of identity management(Using AWS) 
+1.Start Lab in Module 4 
+2.click on IAM.
+3. In the navigation pane on the left, choose Users.
+user-1
+user-2
+user-3
+4. Choose user-1. 
+5. Select on Groups. 
+6. Choose the Security credentials 
+7. In the navigation panel on the left, choose User groups.
+EC2-Admin
+EC2-Support
+S3-Support
+8. Choose the EC2-Support group. 
+16. In the left navigation pane, choose User groups. Choose the S3-Support group.
+17.  choose Add users.
+18. In the Add Users to S3-Support window, configure the following: Select  user-1.
+At the bottom of the screen, choose Add Users.
+In the Users tab you will see that user-1 has been added to the group.
+19. Using similar steps to the ones above,add user-2 to the EC2-Support group.
+user-2 should now be part of the EC2-Support group.
+20. Using similar steps to the ones above, we will add user-3 to the EC2-Admin group.
+user-3 should now be part of the EC2-Admin group.
+21. In the navigation pane on the left, choose User groups.
+Each Group should now have a 1 in the Users column for the number of Users in each Group.
+22. In the navigation pane on the left, choose Dashboard.
+An IAM users sign-in link is displayed on the right. It will look similar to: https://123456789012.signin.aws.amazon.com/console
+This link can be used to sign-in to the AWS Account you are currently using.
+Copy the Sign-in URL for IAM users in this account to a text editor.
+23. Open a private (Incognito) window.
+24. Paste the IAM users sign-in link (https://955445847241.signin.aws.amazon.com/console) 
+25. Next, you will sign-in as user-1, 
+IAM user name: user-1
+Password: Lab-Password1
+26. In the Services menu, choose S3.
+27. Choose the name of the bucket that exists in the account and browse the contents. Since your user is part of the S3-Support Group in IAM,
+Now, test whether they have access to Amazon EC2.
+In the left navigation pane,(search instances) choose Instances.
+You cannot see any 
+Click on launch instances.
+28. Sign user-1 out of the AWS Management Console by completing the following actions:
+At the top of the screen, choose user-1 and Choose Sign Out
+29. Sign-in with:
+IAM user name: user-2
+Password: Lab-Password2
+30. In the Services menu, choose EC2.
+31. In the navigation pane on the left, choose Instances.
+32. Select the instance named LabHost.
+In the Instance state menu above, select Stop instance.
+33. In the Stop Instance window, select Stop.
+34. Next, check if user-2 can access Amazon S3. In the Services, choose S3.
+35. Sign user-2 out of the AWS Management Console 
+36. Sign-in with:
+IAM user name: user-3
+Password: Lab-Password3
+37. In the Services menu, choose EC2.
+38. In the navigation pane on the left, choose Instances.
+39. As an EC2 Administrator.
+40. In the Stop instance window, choose Stop. 
+The instance will enter the stopping state and will shutdown.
+41. Sign user-3 out of the AWS Management Console 
+42. Close the Incognito Tab and IAM Management Console.
+43.  End Lab
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 7: Write a program for web feed.
+2.	Click on Modules.
+5.	EC2.
+6.	launch instance.
+7.	Create instance 
+8.	 create key pair..
+9.PEM file downloaded.
+10. Scroll and Check the checkboxes to allow All HTTP traffic.
+11. Launch instance. Click on your created instance.
+12. Copy the IP address of the instance.
+13. Open Puttygen Software.
+14. .Click on Load.
+15.Browse for pem file.
+16.Click on save private key.
+17.ppk file would have get downloaded.
+18.Open putty software.
+19.Paste IP address of your instance.
+20. Open SSH-> Auth
+21.Browse for ppk file.
+22.Click on open.
+23.login as ec2-user.
+24.After authentication give following commands one after the other :
+ -     $ sudo su
+  -    $ yum install python  (if this command not working use this command, sudo yum install python)
+    -  $ pip install feedparser  (if this command not working use this command, sudo yum install pip)
+25. type y.
+26. then type this command.. $ sudo pip install feedparser
+27. type vi webfeed.py .(type I for insert)
+28. type following entire code into webfeed.py.
+import feedparser
+import webbrowser
+feed = feedparser.parse("https://finance.yahoo.com/rss/")
+feed_title = feed["feed"]["title"]
+feed_entries = feed_entries
+for entry in feed.entries :
+    article_title = entry.title
+    article_link = entry.link
+    article_published_at = entry.published # Unicode String
+    article_published_at_parsed = entry.published_parsed # Time
+    print(article_title) 
+29. done .
+30.terminate the instance.
+31. end lab.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 8: Implementation of VPC using AWS.  
+1.  module 5
+3. Click on Services -> Networking and Content Delivery -> VPC to open VPC management console.
+4. Choose Create VPC to create your own VPC.
+I Choose VPC and more.
+II Under Name tag auto-generation, keep Auto-generate selected, however change the value from project to lab. 
+III Keep the IPv4 CIDR block set to 10.0.0.0/16
+IV For Number of Availability Zones, choose 1.
+V For Number of public subnets, keep the 1 setting.
+VI For Number of private subnets, keep the 1 setting.
+VII Expand the Customize subnets CIDR blocks section
+A Change Public subnet CIDR block in us-east-1a to 10.0.0.0/24
+B Change Private subnet CIDR block in us-east-1a to 10.0.1.0/24
+VIII Set NAT gateways to In 1 AZ.
+IX Set VPC endpoints to None.
+X Keep both DNS hostnames and DNS resolution enabled.
+5. In the Preview panel on the right, confirm the settings you have configured.
+I VPC : lab-vpc
+II Subnets :
+us-east-1a
+III Public subnet name : lab-subnet-public1-us-east-1a
+IV Private subnet name : lab-subnet-private1-us-east-1a
+V Route tables : 
+lab-rtb-public
+lab-rtb-private1-us-east-1a
+VI Network connections : 
+lab-igw
+lab-nat-public1-us-east-1a
+6 At the bottom of the screen, choose Create VPC. The VPC resources are created.
+7. Once it is complete, choose View VPC.
+8. Choose Subnets to view the subnet details
+9. Choose Route tables to view the route table details.
+10 In the left navigation pane, choose Subnets. First, we will create a second public subnet.
+11. Choose Create subnet then configure:
+I VPC ID:  lab-vpc (select from the menu).
+II Subnet name: lab-subnet-public2
+III Availability Zone: Select the second Availability Zone (for example, us-east-1b)
+IV IPv4 CIDR block: 10.0.2.0/24  (set this cidr)
+The subnet will have all IP addresses starting with 10.0.2.x.
+12. Choose Create subnet
+The second public subnet was created. Now we will create a second private subnet.
+13. Choose Create subnet then configure:
+I VPC ID: lab-vpc
+II Subnet name: lab-subnet-private2
+III Availability Zone: Select the second Availability Zone (for example, us-east-1b)
+IV IPv4 CIDR block: 10.0.3.0/24
+The subnet will have all IP addresses starting with 10.0.3.x.
+14. Choose Create subnet. The second private subnet was created.
+15. In the left navigation pane, choose Route tables.
+16 Select  the lab-rtb-private1-us-east-1a route table.
+17. In the lower pane, choose the Routes tab. 
+18. Choose the Subnet associations tab.
+19. Choose Edit subnet associations. Leave lab-subnet-private1-us-east-1a selected, but also select  lab-subnet-private2.
+20. Choose Save associations. 
+21. Select the  lab-rtb-public route table (and deselect any other subnets).
+22. In the lower pane, choose the Routes tab.
+23. You will now associate this route table to the second public subnet you created.
+Choose the Subnet associations tab and Choose Edit subnet associations.
+24. Leave lab-subnet-public1-us-east-1a selected, but also select  lab-subnet-public2.
+25. Choose Save associations
+26. In the left navigation pane, choose Security groups.
+27. Choose Create security group and then configure:
+I Security group name: Web Security Group
+II Description: Enable HTTP access
+II VPC: choose the X to remove the currently selected VPC, then from the drop down list choose lab-vpc
+28. In the Inbound rules pane, choose Add rule
+Configure the following settings:
+Type: HTTP
+Source: Anywhere-IPv4
+Description: Permit web requests
+29.  choose Create security group.
+30. In the search box to the right of Services,open for EC2 
+31. From the Launch instance menu choose Launch instance.
+32. Name the instance ,Give it the name Web Server 1
+33. Choose an AMI from which to create the instance:
+In the list of available Quick Start AMIs, keep the default Amazon Linux AMI selected.
+34. Select the key pair to associate with the instance:
+From the Key pair name menu, give the name to key pair.
+35. Configure the Network settings:
+Next to Network settings, choose Edit, then configure: 
+Network: lab-vpc 
+Subnet: lab-subnet-public2 (not Private!)
+Auto-assign public IP: Enable
+Under Firewall (security groups), choose  Select an existing security group.
+For Common security groups, select  Web Security Group.
+This security group will permit HTTP access to the instance.
+36. Expand the Advanced details panel.
+bottom of the page and then copy and paste the code shown below into the User data box:
+#!/bin/bash
+# Install Apache Web Server and PHP
+yum install -y httpd mysql php
+# Download Lab files
+wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-100-ACCLFO-2/2-lab2-vpc/s3/lab-app.zip
+unzip lab-app.zip -d /var/www/html/
+# Turn on web server
+chkconfig httpd on
+service httpd start
+37. At the bottom of the Summary panel on the right side of the screen choose Launch instance 
+You will see a Success message.
+38. Choose View all instances 
+Wait until Web Server 1 shows 2/2 checks passed in the Status check column.
+39 Select  Web Server 1. Copy the Public IPv4 DNS value shown in the Details tab at the bottom of the page.
+40. Open a new web browser tab, paste the Public DNS value and press Enter. 
+41.  End Lab 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 9: Launch RDS Instance(AWS)
+1.Start Learner Lab 
+2. Go to Services -> Compute -> EC2.
+3. Under Network and Firewall Security, click on Security Groups.
+4. Click on Create Security Group to create a new security group.	
+5. Give name and description to security group.
+6. Add Inbound Rules such as HTTP, SSH and HTTPS.
+7. Click on Create Security Group.
+8. Now, go to Services -> Database -> RDS.
+9. Click on Create Database.
+10. Select MySQL in Engine Options.
+11. Under Template section, choose free tier.
+12. Type name for DB instance. Enter username and password for authentication.
+13.Keep Instance Configuration t3.micro
+14. Keep storage type as General Purpose SSD and minimize storage for allocation. Disable Storage Autoscaling option.
+15. In Connectivity section, allow public access.
+16. Choose security group that you have created and keep remaining settings as it is.
+17. Keep remaining settings as it is.
+18. In Additional Configuration section, give name to the database and disable automatic backups.
+19. Keep encryption settings as it is.
+20. Disable Auto Minor Version Upgrade.
+21. Click on Create Database.
+22. Click on Database name.
+23. Select the created database. In Connectivity and Security section, copy endpoint.
+24. Open MySQLWorkbench.
+25. Go to Database -> Connect to Database.
+26. Paste the endpoint that you have copied in hostname.
+27. Enter username and password.
+28. Click ok
+29. Now you can work on mysql.
+30. At the end delete the database 
+31. end the lab.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical -10 -Working and Implementation of Platform as a service. AWS Elastic Beanstalk: Use this tool to upload sample code for web apps. 
+1.Console Home 
+2.Create Application 
+3.Application Name 
+4.Select Platform 
+5.Successfully Created 
+6.Output 
+7.Terminating 
+8.Deleting 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practical 11: Installation and configuration of cloud Hadoop and demonstrate simple query
+1. Start learner lab 
+2. Services -> Storage -> S3.
+3. Click on Create Bucket.
+4. Give name to bucket and choose ACL’s enabled.
+5. Untick block all access and check on acknowledgement.
+6. Keep all settings as it is and click on create bucket.
+7. Click on created bucket and choose upload option.
+8. Click on add files option and upload csv file.
+9. Now, click on Permissions option and grant public read access and check on acknowledgement.
+10. Click on upload option and wait for the file to be uploaded.
+11. Go to Services -> Compute -> EC2 and click on key pairs.
+12. Click on create key pairs.
+13. Give name to the key pair and choose .pem private key file format and click on create key pair.
+14. Go to Services -> Analytics -> EMR.
+15. Click on create cluster.
+16. Give name to the cluster and select the bucket that you have created. 
+17. Keep the remaining settings as it is.
+18. Choose EC2 key pair that you have created early and click on create cluster.
+19. Wait for the master node and core node to be get started.
+20. Click on security group of master node.
+21. Click on Security group id of master node.
+22 .Click on Edit Inbound Rules.
+24. Select type and source as SSH and anywhere IPv4 and click on save rules.
+25. Copy master node public DNS.
+ec2-184-73-31-59.compute-1.amazonaws.com
+26. Open Puttygen and load the .pem file that you have downloaded.
+27. Click on Save Private key and give name to the .ppk file.
+28. Close Puttygen and open Putty.
+29. Paste the Master node DNS address and go to SSH -> Auth.
+30. Browse the .ppk file that you have downloaded and click on open and accept.
+31. Log in as ec2-user
+32. type the following commands on terminal.
+1.  sudo su
+2. hive
+3. type this following code :
+ CREATE EXTERNAL TABLE trades_sample
+        (trading_date_time TIMESTAMP,
+         network CHAR(1),
+         message_category CHAR(1),
+         message_type CHAR(1),
+         message_sequence BIGINT,
+         market_exchange CHAR(1),
+         symbol VARCHAR(10),
+         trade_price DOUBLE,
+         trade_size BIGINT,
+         trade_conditions VARCHAR(6),
+         trade_conditions2 VARCHAR(6) )
+     ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+     LOCATION 's3://hadoopbucket1234/';
+4. describe trades_sample
+V select count(*) from trades_sample;
+33. Close the linux server connection.
+34. In the left panel click on clusters and select the cluster that you have created and terminate it.
+35. Go to S3 -> Buckets.
+36. Delete the data in the bucket 
+37. delete bucket.
+38. end lab.
+
+
+
